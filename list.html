@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>24N 리스트</title>
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">-->
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+      @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        box-sizing: border-box;
+        font-family: "Inconsolata", "Noto Sans KR", monospace;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #f2f2f2;
+      }
+
+      #wrap {
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 20px;
+        min-width: 800px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      hr {
+        width: 90%;
+        margin: 110px auto 80px;
+        border: 0;
+        border-bottom: 2px solid #666;
+      }
+
+      caption {
+        display: none;
+      }
+
+      table {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 60px;
+        font-size: 1.5rem;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 50px 80px -50px rgba(50, 50, 50, 0.12),
+          0 50px 50px -30px rgba(20, 20, 20, 0.1);
+        color: #555;
+      }
+
+      th {
+        padding: 12px;
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        border: 0;
+        background-color: #00acc1;
+      }
+
+      table.first th {
+        background-color: #00acc1;
+      }
+
+      td {
+        padding: 14px 20px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        border-top: 1px solid #ededed;
+        background-color: #fff;
+        border: 1px solid #ededed;
+        border-right: 0;
+      }
+
+      tr > td:first-child {
+        font-weight: 500;
+        color: #000;
+        border-left: 0;
+        letter-spacing: -0.03em;
+      }
+
+      td[rowspan] {
+        /* font-size: 15px; */
+        letter-spacing: 1.5px;
+        text-align: center;
+      }
+
+      .link {
+        letter-spacing: 0.03em;
+        font-weight: 600;
+      }
+
+      a {
+        color: #333;
+      }
+
+      a:hover,
+      a:focus {
+        color: #00acc1;
+        outline: 0;
+      }
+
+      .first a:hover {
+        color: #00acc1;
+      }
+
+      .first a:hover {
+        color: #00acc1;
+      }
+
+      h1 {
+        display: none;
+      }
+
+      h2 {
+        margin: 30px 0;
+        text-align: center;
+        font-size: 2.8rem;
+        letter-spacing: -0.06rem;
+        color: #a6cebf;
+        font-weight: bold;
+      }
+
+      .horizon {
+        width: 80%;
+        height: 1px;
+        margin: 40px auto;
+        background-color: #aaa;
+      }
+
+      .update {
+        display: inline-block;
+        margin: 18px 0 30px 0;
+        padding: 18px 26px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.95rem;
+        border: 1px solid #888;
+        background: #fff;
+      }
+
+      .update small {
+        display: block;
+        margin-top: 4px;
+        font-size: 70%;
+        color: #666;
+        font-weight: 400;
+      }
+
+      .update .version1 {
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        background-color: rgba(255, 180, 182, 0.4);
+      }
+
+      .rmks {
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      .borderTop {
+        border-top: 2px solid #e4e4e4;
+      }
+
+      .borderTop2 {
+        border-top: 2px solid #d3d3d3;
+      }
+
+      @media screen and (max-width: 800px) {
+        html {
+          font-size: 55%;
+        }
+
+        #wrap {
+          min-width: 320px;
+        }
+
+        thead > tr > th:first-child,
+        thead > tr > th:nth-child(4),
+        thead > tr > th:nth-child(5) {
+          display: none;
+        }
+
+        td[rowspan] {
+          display: none;
+        }
+
+        .desc,
+        .rmks {
+          display: none;
+        }
+      }
+
+      .new td {
+        background-color: rgba(214, 255, 180, 0.2);
+      }
+
+      .new td[rowspan] {
+        background-color: #fff;
+      }
+
+      .notyet {
+        color: gray;
+        text-decoration: line-through;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <p class="update">
+        24N 센터용 LIST
+      </p>
+
+      <table>
+        <colgroup>
+          <col width="100px" />
+          <col width="200px" />
+          <col width="420px" />
+          <col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>그룹</th>
+            <th>파일명(LINK)</th>
+            <th>화면 내용</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>인트로</strong></td>
+            <td>
+              <a class="link" href="html/cen-intro.html" target="_blank"
+                >인트로</a
+              >
+            </td>
+            <td>회원가입 1단계 - 이메일 입력</td>
+            <td class="rmks"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
